@@ -175,8 +175,8 @@ if __name__ == '__main__':
             time.sleep(2)
             while True:
                 if str(player.get_state()) not in ["State.Playing", "State.Paused", "State.Stopped"]:
+                    MusicParty1.suggested_songs.remove(MusicParty1.suggested_songs[0])
                     break
-            MusicParty1.suggested_songs.remove(MusicParty1.suggested_songs[0])
         except IndexError:
             pass
         except ImportError:
